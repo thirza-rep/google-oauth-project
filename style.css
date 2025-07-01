@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 100%;
+    background: #4285F4;
+    color: #fff;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 4px 16px rgba(66,133,244,0.12);
+}
+
+.brand {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.search-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(66,133,244,0.12);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1em;
+    width: 180px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 30px;
+}
+
+.profile-dropdown {
+    position: relative;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.profile-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background 0.2s ease-in-out;
+}
+
+.profile-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-btn img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 0 2px #fff;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 48px;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.profile-dropdown.show .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: background 0.2s ease-in-out;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background: #f1f1f1;
+    color: #e53935;
+}
+
+.dashboard-container {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 14px;
+    max-width: 800px;
+    margin: 100px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.berita {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.berita-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.berita-foto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 2px #4285F4;
+    margin-bottom: 10px;
+}
+
+.berita-judul {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4285F4;
+}
+
+.berita-role {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.berita-tanggal {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.berita-isi {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 14px;
+}
+
+.github-link {
+    background: #24292e;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.github-link:hover {
+    background: #444c56;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .dashboard-container {
+        padding: 20px 5vw;
+    }
+}
